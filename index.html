@@ -13,9 +13,9 @@
         }
 
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte serifada */
+            font-family: Georgia, 'Times New Roman', Times, serif;
             background-color: #0a1f44; /* Azul escuro intenso */
-            color: #ffffff; /* Texto branco */
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,64 +25,145 @@
         }
 
         .container {
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             text-align: center;
         }
 
+        /* Nova frase elegante acima do cabeçalho */
+        .frase-elegante {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 1rem;
+        }
+
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-weight: normal;
             letter-spacing: 1px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.3;
         }
 
         .links-list {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.8rem;
         }
 
         .link-item {
-            display: block;
-            padding: 1rem 1.5rem;
-            border: 2px solid #ffffff; /* Borda branca */
-            border-radius: 50px; /* Botões arredondados */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .social-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 2px solid #ffffff;
+            border-radius: 40px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
             transition: all 0.3s ease;
             background-color: transparent;
+            margin-bottom: 0.5rem;
+            min-width: 250px;
         }
 
-        .link-item:hover {
+        .social-button:hover {
             background-color: #ffffff;
-            color: #0a1f44; /* Azul escuro do fundo */
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: #0a1f44;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Para manter a consistência em dispositivos móveis */
+        .link-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+            max-width: 90%;
+            line-height: 1.4;
+        }
+
         @media (max-width: 480px) {
+            .frase-elegante {
+                font-size: 1.4rem;
+                padding-bottom: 0.8rem;
+            }
+            
             h1 {
                 font-size: 2rem;
+                margin-bottom: 2rem;
             }
-            .link-item {
-                font-size: 1rem;
-                padding: 0.8rem 1rem;
+            
+            .social-button {
+                font-size: 1.2rem;
+                padding: 0.7rem 1.5rem;
+                min-width: 200px;
+            }
+            
+            .link-description {
+                font-size: 0.9rem;
+            }
+            
+            .links-list {
+                gap: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Nossos Links</h1>
+        <!-- Frase elegante acima do cabeçalho -->
+        <div class="frase-elegante">
+            Comunidade Eosíaca aos Deuses dos Gregos
+        </div>
+        
+        <h1>Encontre a Náucratis em outras redes sociais:</h1>
         <div class="links-list">
-            <a href="https://naucratis.substack.com/>Substack Náucratis</a>
-            <a href="https://open.spotify.com/user/31ex7ro36iwevjrgralp3ft4z75m?si=JqKm2gFUSj27av0tdFoMTQ">Spotify</a>
-            <a href="https://open.spotify.com/show/5aS2stfAuAczoJIJKGJjZf?si=FJ2M6aRAQkm4utRaSrvkjA" class="link-item">Podcast Aurora</a>
-            <a href="https://www.instagram.com/comunidade_naucratis/" target="_blank" class="link-item">Instagram</a>
+            <!-- 1. Substack -->
+            <div class="link-item">
+                <a href="https://substack.com/@naucratis" target="_blank" class="social-button">SUBSTACK</a>
+                <span class="link-description">Assine gratuitamente nossa newsletter</span>
+            </div>
+
+            <!-- 2. Instagram -->
+            <div class="link-item">
+                <a href="https://www.instagram.com/comunidade_naucratis/" target="_blank" class="social-button">INSTAGRAM</a>
+                <span class="link-description">Acompanhe nossas notícias e informativos</span>
+            </div>
+
+            <!-- 3. Podcast Aurora -->
+            <div class="link-item">
+                <a href="https://open.spotify.com/show/5aS2stfAuAczoJIJKGJjZf?si=FJ2M6aRAQkm4utRaSrvkjA" target="_blank" class="social-button">PODCAST AURORA</a>
+                <span class="link-description">Ouça nosso podcast</span>
+            </div>
+
+            <!-- 4. Spotify (Perfil) -->
+            <div class="link-item">
+                <a href="https://open.spotify.com/user/31ex7ro36iwevjrgralp3ft4z75m?si=c0a1bdb87efb4d2d" target="_blank" class="social-button">SPOTIFY</a>
+                <span class="link-description">Siga nossas playlists dedicadas aos Deuses</span>
+            </div>
+
+            <!-- 5. YouTube -->
+            <!-- ATENÇÃO: Substitua o '#' pelo URL completo do canal do YouTube quando disponível -->
+            <div class="link-item">
+                <a href="#" target="_blank" class="social-button">YOUTUBE</a>
+                <span class="link-description">Siga nosso canal no YouTube</span>
+            </div>
         </div>
     </div>
 </body>
